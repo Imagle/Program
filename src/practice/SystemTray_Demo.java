@@ -44,12 +44,13 @@ public class SystemTray_Demo extends JFrame{
 	ImageIcon icon =new ImageIcon(getClass().getResource("/res/book.png"));
 	private SystemTray_Demo(){
 		super();
-		initUI();
+		//getContentPane().add(new JLabel("This is one simple test!",SwingConstants.CENTER));
+		//initUI();
 		initSystemTray();
 	}
 	
 	private void initUI(){
-		//setIconImage(icon.getImage());
+		setIconImage(icon.getImage());
 		JPanel panel = new JPanel();
 		panel.setBorder(new LineBorder(Color.green, 1, false));
 		panel.setLayout(new BorderLayout());

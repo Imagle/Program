@@ -1,4 +1,4 @@
-package practice;
+package ArtOfPrograming;
 
 import java.util.Random;
 

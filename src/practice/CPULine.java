@@ -1,3 +1,4 @@
+package practice;
 
 public class CPULine {
 	public static void main(String[] args) throws Exception {
