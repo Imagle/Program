@@ -1,4 +1,4 @@
-package practice;
+package ArtOfPrograming;
 
 public class ContainString {
 
@@ -24,7 +24,7 @@ public class ContainString {
 	 * 思路二：
 	 * 先对两个数组进行排序，然后在依次轮训比较
 	 */
-	public static boolean isContainsBySort(char[] s1, char[] s2){
+	public static boolean isContainsBySort(int[] s1, int[] s2){
 		int i=0, j=0;
 		int n = s1.length;
 		int m = s2.length;
@@ -44,7 +44,7 @@ public class ContainString {
 	/*
 	 * 递归快速排序
 	 */
-	public static void quickSort(char[] s, int begin, int end){
+	public static void quickSort(int[] s, int begin, int end){
 		if(begin >= end) return;
 		int i = partition(s, begin, end);
 		quickSort(s, begin, i-1);
@@ -62,15 +62,15 @@ public class ContainString {
 	 * 标志位之前的数一定比它小1
 	 * 标志位之后的数一定比它大
 	 */
-	private static int partition(char[] s, int begin, int end){
+	public static int partition(int[] s, int begin, int end){
 		if(begin>end) return -1;
 		int i=begin, j=end;
-		char temp = s[begin];
+		int temp = s[begin];
 		while(i<j){
 			while(i<j && s[j]>=temp) j--; /* 标志位之前的数一定比它小*/
 			if(i<j) 
 				s[i] = s[j]; /*后面的往前移*/
-			while(i<j && s[i]<=temp) i++; /* 标志位之前的数一定比它小*/
+			while(i<j && s[i]<temp) i++; /* 标志位之前的数一定比它小*/
 			if(i<j) 
 				s[j] = s[i]; /*前面的往后移*/
 		}
@@ -88,9 +88,9 @@ public class ContainString {
 		System.out.println("By Array, s1 is contains s2:" + bool);
 		String ss = "EFGHIJKABCD";
 		String sp = "CDFK";
-		System.out.println("By Sort: " + isContainsBySort(ss.toCharArray(), sp.toCharArray()));
+		//System.out.println("By Sort: " + isContainsBySort(ss.toCharArray(), sp.toCharArray()));
 		System.out.println("====================");
-		char[] ch = {'4', '5', '6', '7', '8', '9','1','2', '3'};
+		int[] ch = {'4', '5', '6', '7', '8', '9','1','2', '3'};
 		int index = 0;
 		quickSort(ch, 0, ch.length-1);
 		System.out.print("index is: " + index + " partition: ");

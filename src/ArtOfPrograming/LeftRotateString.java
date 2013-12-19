@@ -1,4 +1,4 @@
-package practice;
+package ArtOfPrograming;
 
 public class LeftRotateString {
 
