@@ -10,6 +10,7 @@
 	<classpathentry kind="lib" path="lib/httpcore-4.3.jar" sourcepath="C:/Users/Ruiqiang/Downloads/httpcomponents-client-4.3.1-src.zip"/>
 	<classpathentry kind="lib" path="lib/httpmime-4.3.1.jar"/>
 	<classpathentry kind="lib" path="lib/apache-mime4j-0.5.jar"/>
-	<classpathentry kind="lib" path="lib/log4j.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-api-2.0-beta9.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-core-2.0-beta9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

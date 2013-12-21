@@ -4,9 +4,9 @@ import java.util.* ;
 import java.io.* ;
 import java.net.* ;
 // add for log4j: import some package
-import org.apache.log4j.PropertyConfigurator ;
-import org.apache.log4j.Logger ;
-import org.apache.log4j.Level ;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Level;
 /**
  *
  * <p> Server With Log4j </p>
@@ -20,7 +20,7 @@ public class ServerWithLog4j {
     we can do most logging operations by Logger except configuration.
     getLogger(...): retrieve a logger by name, if not then create for it.
     */
-    static Logger logger = Logger.getLogger 
+    static Logger logger = LogManager.getLogger 
 	( ServerWithLog4j.class.getName () ) ;
     /**
      *
@@ -38,7 +38,7 @@ public class ServerWithLog4j {
         add for log4j: class BasicConfigurator can quickly configure the package.
         print the information to console.
         */
-        PropertyConfigurator.configure ( "ServerWithLog4j.properties" ) ;
+        //PropertyConfigurator.configure ( "ServerWithLog4j.properties" ) ;
         // add for log4j: set the level
 //        logger.setLevel ( ( Level ) Level.DEBUG ) ;
         try{
