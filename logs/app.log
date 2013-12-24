@@ -1,0 +1,24 @@
+2013-12-22 at 22:52:21 CST TRACE practice.log4j.TestLog4j2 11 main - test
+2013-12-22 at 22:52:21 CST ERROR practice.log4j.TestLog4j2 12 main - error
+2013-12-22 at 22:52:39 CST ERROR practice.log4j.ClientWithLog4j 52 main - IOException : java.net.ConnectException: Connection refused: connect
+2013-12-23 at 09:19:31 CST TRACE practice.log4j.TestLog4j2 11 main - test
+2013-12-23 at 09:19:31 CST ERROR practice.log4j.TestLog4j2 12 main - error
+2013-12-23 at 09:28:32 CST INFO  ArtOfPrograming.LeftRotateString 116 main - new gcd: 27491
+2013-12-23 at 09:30:22 CST INFO  ArtOfPrograming.LeftRotateString 114 main - b is 1
+2013-12-23 at 09:30:22 CST INFO  ArtOfPrograming.LeftRotateString 117 main - new gcd: 10638064
+2013-12-23 at 09:31:45 CST INFO  ArtOfPrograming.LeftRotateString 108 main - The rotated s is [C@12d263f
+2013-12-23 at 09:31:45 CST INFO  ArtOfPrograming.LeftRotateString 115 main - b is 1
+2013-12-23 at 09:31:45 CST INFO  ArtOfPrograming.LeftRotateString 118 main - new gcd: 168974
+2013-12-23 at 09:32:07 CST INFO  ArtOfPrograming.LeftRotateString 108 main - The rotated s is [C@1bcc0bc
+2013-12-23 at 09:32:07 CST INFO  ArtOfPrograming.LeftRotateString 115 main - b is 1
+2013-12-23 at 09:32:07 CST INFO  ArtOfPrograming.LeftRotateString 118 main - new gcd: 166408
+2013-12-23 at 09:32:42 CST INFO  ArtOfPrograming.LeftRotateString 108 main - The rotated s is [C@12d263f
+2013-12-23 at 09:32:42 CST INFO  ArtOfPrograming.LeftRotateString 115 main - b is 1
+2013-12-23 at 09:32:42 CST INFO  ArtOfPrograming.LeftRotateString 118 main - new gcd: 349679
+2013-12-23 at 09:33:03 CST INFO  ArtOfPrograming.LeftRotateString 108 main - The rotated s is [C@111a3a4
+2013-12-23 at 09:33:03 CST INFO  ArtOfPrograming.LeftRotateString 115 main - b is 1
+2013-12-23 at 09:33:03 CST INFO  ArtOfPrograming.LeftRotateString 118 main - new gcd: 164210
+2013-12-24 at 10:02:22 CST INFO  ArtOfPrograming.Strstr 36 strstr - i is 6
+2013-12-24 at 10:02:31 CST INFO  ArtOfPrograming.Strstr 13 main - strstr is 6
+2013-12-24 at 10:25:28 CST INFO  ArtOfPrograming.Strstr 34 strstr - i is 6
+2013-12-24 at 10:25:28 CST INFO  ArtOfPrograming.Strstr 52 main - strstr is 6

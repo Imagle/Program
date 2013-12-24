@@ -1,7 +1,18 @@
 package ArtOfPrograming;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
+import practice.log4j.TestLog4j2;
+
 public class LeftRotateString {
 
+	public static Logger logger = LogManager.getLogger(LeftRotateString.class.getClass());
+	
+	
+	//public static Logger log  = LogManager.getLogger(TestLog4j2.class.getName());
+	
 	/*
 	 * 逆序字符串
 	 */
@@ -92,16 +103,20 @@ public class LeftRotateString {
 		char[] s = {'a', 'b', 'c', 'd', 'e', 'f','g', 'h'};
 		//char[] s = {'1', '2', '3', '4', 'a', 'b', 'c', 'd', 'e'};
 		//s = leftRotateString(s, 2);
-		s = rotate(s, 7);
+		//s = rotate(s, 7);
 		System.out.println(s);
+		logger.info("The rotated s is " + s);
 		
 		int b;
-		long begin, end ;
+		long begin, end;
 		begin = System.nanoTime();
 		b = gcd(4, 3);
-		System.out.println(b);
+		//System.out.println(b);
+		logger.info("b is " + b);
 		end = System.nanoTime();
-		System.out.println("new gcd: " + (end-begin));
+		//System.out.println("new gcd: " + (end-begin));
+		logger.info("new gcd: " + (end-begin));
+		
 		
 		/*
 		begin = System.nanoTime();

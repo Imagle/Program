@@ -45,6 +45,7 @@ public class ServerWithLog4j {
             server = new ServerSocket ( SERVER_PORT ) ;
             // add for log4j: log a message with the info level
             logger.info ( "ServerSocket before accept: " + server ) ;
+            logger.trace("ruiqiang");
             // add for log4j: log a message with the info level
             logger.info ( "Java server with log4j, on-line!" ) ;
             // wait for client's connection

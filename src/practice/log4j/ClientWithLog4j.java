@@ -44,6 +44,7 @@ public class ClientWithLog4j {
             client = new Socket( "localhost" , 8001 ) ;
             // add for log4j: log a message with the info level
             logger.info ( "Client socket: " + client ) ;
+            logger.trace("test");
             in = client.getInputStream () ;
             out = client.getOutputStream () ;
         } catch ( IOException e ) {

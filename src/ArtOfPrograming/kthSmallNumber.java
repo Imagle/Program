@@ -35,32 +35,34 @@ public class kthSmallNumber {
 	 * 3：当i>k-1时，最小的k个数既存在于前i个数中,又存在于i+1~n-1个数中
 	 * 				也即，最小的数包含前面0-i个数和后面k-i-1个数
 	 * 
-	 * 有点类似利用快速排序的思想, 时间复杂度近视O(n)
+	 * 有点类似利用快速排序的思想, 时间复杂度近似O(n)
 	 */
-	public static void kthSmallPartition(int[] array, int begin, int end, int k){
+	public static int kthSmallPartition(int[] array, int begin, int end, int k){
 
 		int i = ContainString.partition(array, begin, end);
 		if((i-begin)==k-1)
-			return ;
+			return array[i];
 		else if((i-begin)<k-1){
-			kthSmallPartition(array, i+1, end, k-i+begin-1);
+			return kthSmallPartition(array, i+1, end, k-i+begin-1);
 		}
 		else{
-			kthSmallPartition(array, begin, i-1, k);
+			return kthSmallPartition(array, begin, i-1, k);
 		}
 	}
 
-	
-	public static void findkth(int[] array, int begin, int end, int k){
+	public static int findkth(int[] array, int begin, int end, int k){
 		if(begin < end){
 			int index = ContainString.partition(array, begin, end);
-			if( index > k){
-				findkth(array, begin, index-1, k);
+			if(index == k-1)
+				return array[index];
+			else if( index > k-1){
+				return findkth(array, begin, index-1, k);
 			}
-			else if(index < k){
-				findkth(array, index+1, end, k);
+			else if(index < k-1){
+				return findkth(array, index+1, end, k);
 			}
 		}
+		return -1;
 	}
 	
 	/*
@@ -84,10 +86,10 @@ public class kthSmallNumber {
 	public static void main(String[] args) {
 		int[] test = {1, 2, 5, 3, 7, 4, 9, 6, 8};
 		//kthSmall(test, 4);
-		int k = 4;
+		int k = 3;
 		//kthSmallPartition(test, 0, test.length-1, k);
-		//findkth(test, 0, test.length-1, k);
-		kthSmallByHeap(test, k);
+		findkth(test, 0, test.length-1, k);
+		//kthSmallByHeap(test, k);
 		for(int i=0; i<k; i++)
 			System.out.print(test[i] + " ");
 	}
