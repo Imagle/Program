@@ -39,8 +39,6 @@ public class LCS {
 			else
 				j++;
 		}
-		System.out.println("==from begin===");
-		
 		return s;
 	}
 	

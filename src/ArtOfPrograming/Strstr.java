@@ -40,15 +40,23 @@ public class Strstr {
 	}
 	
 	/*
-	 * 寻找第一个只出现一次的数
+	 * 寻找第一个只出现一次的数的下标
 	 */
 	public static int findOnceChar(String s){
+		if(s == null) return -1;
 		int i=0;
-		return s.charAt(i);
+		int[] count = new int[26];
+		for(; i<s.length(); i++)
+			count[s.charAt(i)-'a']++;
+		for(i=0; i<s.length(); i++)
+			if(count[s.charAt(i)-'a'] == 1)
+				return i;
+		return -1;
 	}
 
 	public static void main(String[] args) {
-		int i = strstr();
+		//int i = strstr();
+		int i = findOnceChar("abaccdeff");
 		logger.info("strstr is " + i);
 	}
 	

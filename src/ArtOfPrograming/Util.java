@@ -42,6 +42,13 @@ public class Util {
 		}
 	}
 	
+	public static void print(int[] array){
+		int n = array.length;
+		for(int i=0; i<n; i++)
+			System.out.print(array[i] + "  ");
+		System.out.println();
+	}
+	
 	public static void main(String[] args) {
 		int value = extrema(1, 3, 2, 1);
 		System.out.println("value: " + value);
